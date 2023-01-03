@@ -10,7 +10,7 @@ interface Props {
   range?: Range;
 }
 
-function RangeAtIndex({ el, index = 0, offset = 0, range }: Props) {
+function rangeAtIndex({ el, index = 0, offset = 0, range }: Props) {
   const doc = el.ownerDocument;
   if (!range) range = doc.createRange();
 
@@ -47,4 +47,4 @@ function RangeAtIndex({ el, index = 0, offset = 0, range }: Props) {
   return range;
 }
 
-export { RangeAtIndex };
+export { rangeAtIndex };
