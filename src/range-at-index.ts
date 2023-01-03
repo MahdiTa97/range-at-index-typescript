@@ -47,4 +47,4 @@ function RangeAtIndex({ el, index = 0, offset = 0, range }: Props) {
   return range;
 }
 
-export default RangeAtIndex;
+export { RangeAtIndex };

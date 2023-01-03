@@ -1,5 +1,1 @@
-import rangeAtIndex from './range-at-index';
-
-export { rangeAtIndex };
-
-export default { rangeAtIndex };
+export * from './range-at-index';
