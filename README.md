@@ -1,19 +1,21 @@
-# TSDX User Guide
+# Range-at-Index-Typescript
 
-Congrats! You just saved yourself hours of work by bootstrapping this project with TSDX. Let’s get you oriented with what’s here and how to use it.
-
-> This TSDX setup is meant for developing libraries (not apps!) that can be published to NPM. If you’re looking to build a Node app, you could use `ts-node-dev`, plain `ts-node`, or simple `tsc`.
-
-> If you’re new to TypeScript, checkout [this handy cheatsheet](https://devhints.io/typescript)
+A Typescript package that returns a Range instance selecting text within an HTML Element, at start and end offsets Stars
 
 ## Commands
 
-TSDX scaffolds your new library inside `/src`.
+The main files are inside `/src`.
 
-To run TSDX, use:
+To run project, use:
 
 ```bash
-npm start # or yarn start
+npm install
+```
+
+then
+
+```bash
+npm run start # or yarn start
 ```
 
 This builds to `/dist` and runs the project in watch mode so any edits you save inside `src` causes a rebuild to `/dist`.
@@ -34,29 +36,6 @@ Jest tests are set up to run with `npm test` or `yarn test`.
 
 [`size-limit`](https://github.com/ai/size-limit) is set up to calculate the real cost of your library with `npm run size` and visualize the bundle with `npm run analyze`.
 
-#### Setup Files
-
-This is the folder structure we set up for you:
-
-```txt
-/src
-  index.tsx       # EDIT THIS
-/test
-  blah.test.tsx   # EDIT THIS
-.gitignore
-package.json
-README.md         # EDIT THIS
-tsconfig.json
-```
-
-### Rollup
-
-TSDX uses [Rollup](https://rollupjs.org) as a bundler and generates multiple rollup configs for various module formats and build settings. See [Optimizations](#optimizations) for details.
-
-### TypeScript
-
-`tsconfig.json` is set up to interpret `dom` and `esnext` types, as well as `react` for `jsx`. Adjust according to your needs.
-
 ## Continuous Integration
 
 ### GitHub Actions
@@ -68,7 +47,7 @@ Two actions are added by default:
 
 ## Optimizations
 
-Please see the main `tsdx` [optimizations docs](https://github.com/palmerhq/tsdx#optimizations). In particular, know that you can take advantage of development-only optimizations:
+Please see the main [optimizations docs](https://github.com/palmerhq/tsdx#optimizations). In particular, know that you can take advantage of development-only optimizations:
 
 ```js
 // ./types/index.d.ts
@@ -90,14 +69,4 @@ The appropriate paths are configured in `package.json` and `dist/index.js` accor
 
 ## Named Exports
 
-Per Palmer Group guidelines, [always use named exports.](https://github.com/palmerhq/typescript#exports) Code split inside your React app instead of your React library.
-
-## Including Styles
-
-There are many ways to ship styles, including with CSS-in-JS. TSDX has no opinion on this, configure how you like.
-
-For vanilla CSS, you can include it at the root directory and add it to the `files` section in your `package.json`, so that it can be imported separately by your users and run through their bundler's loader.
-
-## Publishing to NPM
-
-We recommend using [np](https://github.com/sindresorhus/np).
+[always use named exports.](https://github.com/palmerhq/typescript#exports) Code split inside your React app instead of your React library.
