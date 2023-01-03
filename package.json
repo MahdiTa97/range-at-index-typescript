@@ -1,5 +1,6 @@
 {
   "version": "0.1.1",
+  "description": "An npm package for demonstration purposes using TypeScript to build for both the ECMAScript Module format (i.e. ESM or ES Module) and CommonJS Module format. It can be used in Node.js and browser applications.",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -59,5 +60,31 @@
     "tsdx": "^0.14.1",
     "tslib": "^2.4.1",
     "typescript": "^4.9.4"
+  },
+  "keywords": [
+    "typescript",
+    "dom",
+    "browser",
+    "range",
+    "offset",
+    "index",
+    "text",
+    "iterate"
+  ],
+  "bugs": {
+    "url": "https://github.com/mahdita97/range-at-index-typescript/issues"
+  },
+  "homepage": "https://github.com/mahdita97/range-at-index-typescript#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mahdita97/range-at-index-typescript.git"
   }
 }
