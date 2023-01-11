@@ -1,7 +1,12 @@
 # Changelog
 
-## [0.1.3](https://github.com/MahdiTa97/range-at-index-typescript/compare/0.1.2...0.1.3)
+## [0.1.4](https://github.com/MahdiTa97/range-at-index-typescript/compare/0.1.3...0.1.4)
 
+- fix: function types issue resolved [`ecee68f`](https://github.com/MahdiTa97/range-at-index-typescript/commit/ecee68faf26e8201a44e9309b02984a1a3478914)
+
+## [0.1.3](https://github.com/MahdiTa97/range-at-index-typescript/compare/0.1.2...0.1.3) (2023-01-03)
+
+- chore: Release v0.1.3 [`82f4fb2`](https://github.com/MahdiTa97/range-at-index-typescript/commit/82f4fb224f582bbfe51233d041b4cbf4db1afafe)
 - fix: mistake in function name [`1b1e7af`](https://github.com/MahdiTa97/range-at-index-typescript/commit/1b1e7afc771d8e8a8f223da6f464b7adbedadfe1)
 
 ## [0.1.2](https://github.com/MahdiTa97/range-at-index-typescript/compare/0.1.1...0.1.2) (2023-01-03)
