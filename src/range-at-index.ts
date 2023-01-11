@@ -4,25 +4,26 @@ interface PointType {
 }
 
 interface Props {
-  el: Element;
-  index?: number;
-  offset?: number;
+  el: Node;
+  index: number;
+  offset: number;
   range?: Range;
 }
 
-function rangeAtIndex({ el, index = 0, offset = 0, range }: Props) {
+function rangeAtIndex({ el, index, offset, range }: Props) {
   const doc = el.ownerDocument;
-  if (!range) range = doc.createRange();
-
-  const iterator = doc.createNodeIterator(el, NodeFilter.SHOW_TEXT, null);
 
   let start: PointType = { node: null, offset: 0 };
   let end: PointType = { node: null, offset: 0 };
-  let node: Node | null = null;
+  let node: Node | null | undefined = null;
   let val: string | null = null;
   let len = 0;
 
-  while ((node = iterator.nextNode())) {
+  if (!range && doc) range = doc.createRange();
+
+  const iterator = doc?.createNodeIterator(el, NodeFilter.SHOW_TEXT, null);
+
+  while ((node = iterator?.nextNode())) {
     val = node.nodeValue;
     len = val?.length ?? 0;
 
@@ -41,8 +42,8 @@ function rangeAtIndex({ el, index = 0, offset = 0, range }: Props) {
   }
 
   // update the range with the start and end offsets
-  if (start.node) range.setStart(start.node, start.offset);
-  if (end.node) range.setEnd(end.node, end.offset);
+  if (start.node) range?.setStart(start.node, start.offset);
+  if (end.node) range?.setEnd(end.node, end.offset);
 
   return range;
 }
